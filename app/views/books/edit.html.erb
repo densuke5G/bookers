@@ -20,13 +20,20 @@
 
       <div class="edit-form">
         <%= form_with model: @book do |f| %>
-          <h4>Title</h4>
-            <%= f.text_field :title %>
-
-          <h4>Body</h4>
-            <%= f.text_area :body %>
-
+          <div class="update-form">
+            <h4>Title</h4>
+              <%= f.text_field :title %>
+          </div>
+          
+          <div class="update-form">
+            <h4>Body</h4>
+              <%= f.text_area :body %>
+          </div>
+          
+          <div class="update-form">
             <%= f.submit :'Update Book'%>
+          </div>
+          
         <% end %>
       </div>
 

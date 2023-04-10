@@ -30,8 +30,7 @@ h1 {
   margin: 8px 0;
 }
 
-.top p, a {
+p, a {
   font-size: 13px;
-  margin: 33px;
+  margin: 0px;
 }
-

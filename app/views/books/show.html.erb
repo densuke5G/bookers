@@ -7,8 +7,10 @@
     <div class="show">
       <%= flash[:notice] %>
 
-      <p><b>Title:</b><%= @book.title %></p>
-      <p><b>Body:</b><%= @book.body %></p>
+      <div class="show-text">
+        <p><b>Title:</b><%= @book.title %></p>
+        <p><b>Body:</b><%= @book.body %></p>
+      </div>
 
       <%= link_to 'Edit', edit_book_path, class: "show-edit" %>
       |
