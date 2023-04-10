@@ -5,8 +5,19 @@
   </head>
   <body>
     <div class="edit">
+      <%= flash[:notice] %>
+
       <h1><b>Editing Book</b></h1>
-      
+
+      <% if @book.errors.any? %>
+        <h2><%= @book.errors.count %> errors occured!!</h2>
+        <ul>
+          <% @book.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
       <div class="edit-form">
         <%= form_with model: @book do |f| %>
           <h4>Title</h4>
